@@ -6,11 +6,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Personal Styles */
-.text-center {
-	text-align: center;
-}
-
 /* Default styles */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3066,6 +3061,18 @@ input, select, textarea {
 			background-color: rgba(0, 0, 0, 0.1);
 		}
 
+		.spotlights > section:nth-child(4) {
+			background-color: rgba(0, 0, 0, 0.15);
+		}
+
+		.spotlights > section:nth-child(5) {
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+
+		.spotlights > section:nth-child(6) {
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+
 		.spotlights > section.inactive > .image:before, body.is-preload .spotlights > section > .image:before {
 			opacity: 1;
 		}
@@ -3896,8 +3903,3 @@ input, select, textarea {
 			}
 
 		}
-
-/* Personal Styles */
-
-.img-portfolio {
-}
