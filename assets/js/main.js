@@ -1,190 +1,182 @@
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* Menu */
 
-(function($) {
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
-	var	$window = $(window),
-		$body = $('body'),
-		$sidebar = $('#sidebar');
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
-		});
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
 
-	// Hack: Enable IE flexbox workarounds.
-		if (browser.name == 'ie')
-			$body.addClass('is-ie');
+const navLink = document.querySelectorAll(".nav-link");
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+function clickOnNavLink() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
+}
 
-	// Forms.
+navLink.forEach((n) => n.addEventListener("click", clickOnNavLink));
 
-		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
+/* Skills */
 
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
+const skillsContent = document.getElementsByClassName("skills-content"),
+  skillsHeader = document.querySelectorAll(".skills-header");
 
-				// Submit form.
-					$(this).parents('form').submit();
+function skillsToggle() {
+  let itemClass = this.parentNode.className;
 
-			});
+  for (i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "skills-content skills-close";
+  }
 
-	// Sidebar.
-		if ($sidebar.length > 0) {
+  if (itemClass === "skills-content skills-close") {
+    this.parentNode.className = "skills-content skills-open";
+  }
+}
 
-			var $sidebar_a = $sidebar.find('a');
+skillsHeader.forEach((el) => {
+  el.addEventListener("click", skillsToggle);
+});
 
-			$sidebar_a
-				.addClass('scrolly')
-				.on('click', function() {
+/* Qualifications */
 
-					var $this = $(this);
+const qualificationTabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
 
-					// External link? Bail.
-						if ($this.attr('href').charAt(0) != '#')
-							return;
+qualificationTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
 
-					// Deactivate all links.
-						$sidebar_a.removeClass('active');
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("visible-qualification");
+    });
 
-					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-						$this
-							.addClass('active')
-							.addClass('active-locked');
+    target.classList.add("visible-qualification");
 
-				})
-				.each(function() {
+    tab.forEach((tab) => {
+      tab.classList.remove("visible-qualification");
+    });
 
-					var	$this = $(this),
-						id = $this.attr('href'),
-						$section = $(id);
+    tab.classList.add("visible-qualification");
+  });
+});
 
-					// No section for this link? Bail.
-						if ($section.length < 1)
-							return;
+/* Certifications */
 
-					// Scrollex.
-						$section.scrollex({
-							mode: 'middle',
-							top: '-20vh',
-							bottom: '-20vh',
-							initialize: function() {
+const certificationInfo = document.querySelectorAll(".certifications-info"),
+  certificationOpen = document.querySelectorAll(".certifications-button"),
+  certificationClose = document.querySelectorAll(".certifications-info-close");
 
-								// Deactivate section.
-									$section.addClass('inactive');
+let modal = function (certificationClick) {
+  certificationInfo[certificationClick].classList.add("active-certification");
+};
 
-							},
-							enter: function() {
+certificationOpen.forEach((certificationButton, i) => {
+  certificationButton.addEventListener("click", () => {
+    modal(i);
+  });
+});
 
-								// Activate section.
-									$section.removeClass('inactive');
+certificationClose.forEach((certification) => {
+  certification.addEventListener("click", () => {
+    certificationInfo.forEach((activeCertification) => {
+      activeCertification.classList.remove("active-certification");
+    });
+  });
+});
 
-								// No locked links? Deactivate all links and activate this section's one.
-									if ($sidebar_a.filter('.active-locked').length == 0) {
+/* Portfolio */
 
-										$sidebar_a.removeClass('active');
-										$this.addClass('active');
+let swiper = new Swiper(".portfolio-container", {
+  cssMode: true,
+  loop: true,
 
-									}
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 
-								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
-										$this.removeClass('active-locked');
+/* Scrolling */
 
-							}
-						});
+const sections = document.querySelectorAll("section[id]");
 
-				});
+function activeScroll() {
+  const scrollY = window.pageYOffset;
 
-		}
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() {
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav-menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav-menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
 
-				// If <=large, >small, and sidebar is present, use its height as the offset.
-					if (breakpoints.active('<=large')
-					&&	!breakpoints.active('<=small')
-					&&	$sidebar.length > 0)
-						return $sidebar.height();
+window.addEventListener("scroll", activeScroll);
 
-				return 0;
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  if (this.scrollY >= 80) nav.classList.add("scroll-header");
+  else nav.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
 
-			}
-		});
+function scrollToTop() {
+  const scrollToTop = document.getElementById("scroll-up");
+  if (this.scrollY >= 560) scrollToTop.classList.add("show-scroll");
+  else scrollToTop.classList.remove("show-scroll");
+}
+window.addEventListener("scroll", scrollToTop);
 
-	// Spotlights.
-		$('.spotlights > section')
-			.scrollex({
-				mode: 'middle',
-				top: '-10vh',
-				bottom: '-10vh',
-				initialize: function() {
+/* Theme switching */
 
-					// Deactivate section.
-						$(this).addClass('inactive');
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "uil-sun";
 
-				},
-				enter: function() {
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
-					// Activate section.
-						$(this).removeClass('inactive');
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 
-				}
-			})
-			.each(function() {
+if (selectedTheme) {
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+    iconTheme
+  );
+}
 
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
-
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
-
-				// Hide <img>.
-					$img.hide();
-
-			});
-
-	// Features.
-		$('.features')
-			.scrollex({
-				mode: 'middle',
-				top: '-20vh',
-				bottom: '-20vh',
-				initialize: function() {
-
-					// Deactivate section.
-						$(this).addClass('inactive');
-
-				},
-				enter: function() {
-
-					// Activate section.
-						$(this).removeClass('inactive');
-
-				}
-			});
-
-})(jQuery);
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});

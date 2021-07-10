@@ -1,187 +1,937 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Shadi A</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" href="assets/images/favicon.png">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/img/favicon.png" />
+    <title>Shadi A | Portfolio</title>
+  </head>
+  <body>
+    <!--Navigation menu -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">Shadi Abumattar</a>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active-link">
+                <i class="uil uil-estate nav-icon"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="uil uil-user nav-icon"></i> About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">
+                <i class="uil uil-file-alt nav-icon"></i> Skills
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#qualifications" class="nav-link">
+                <i class="uil uil-graduation-cap nav-icon"></i> Qualifications
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">
+                <i class="uil uil-scenery nav-icon"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="uil uil-message nav-icon"></i> Contact
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav-close" id="nav-close"></i>
+        </div>
+        <div class="nav-buttons">
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Projects</a></li>
-							<li><a href="#two">Contact Me</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    <main class="main">
+      <!--Home section -->
+      <section class="home section" id="home">
+        <div class="home-container container grid">
+          <div class="home-content grid">
+            <div class="home-social">
+              <a
+                href="https://www.linkedin.com/in/abumattarsa"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a
+                href="https://github.com/AbumattarSA"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="uil uil-github-alt"></i>
+              </a>
+            </div>
+            <div class="home-img">
+              <svg
+                class="home-blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M66.3,-52.8C82,-33.1,88.2,-5.8,82.2,18.1C76.3,42,58.1,62.4,35.4,73.1C12.8,83.9,-14.3,85,-36.4,74.7C-58.4,64.4,-75.4,42.7,-81,18.4C-86.7,-6,-81.1,-33.1,-65.7,-52.7C-50.4,-72.3,-25.2,-84.3,0,-84.3C25.3,-84.4,50.5,-72.4,66.3,-52.8Z"
+                    transform="translate(100 100)"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
+        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
+        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
+        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                  <image
+                    class="home-blob-img"
+                    x="18"
+                    y="-78"
+                    href="assets/img/shadi.png"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="home-data">
+              <h1 class="home-title">Hey, I'm Shadi! :)</h1>
+              <h3 class="home-subtitle">Software Engineer | CS Student</h3>
+              <p class="home-description">
+                Already excited about my next project.
+              </p>
+              <a href="#contact" class="button flex-button">
+                Contact me<i class="uil uil-message icon-button"></i>
+              </a>
+            </div>
+          </div>
+          <div class="scroll-from-home">
+            <a href="#about" class="scroll-from-home-button flex-button">
+              <i class="uil uil-mouse-alt scroll-from-home-mouse"></i>
+              <span class="scroll-from-home-text">Take a peek</span>
+              <i class="uil uil-arrow-down scroll-from-home-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+      <!--About section -->
+      <section class="about section" id="about">
+        <h2 class="section-title">About me</h2>
+        <span class="section-subtitle">Introducing myself.</span>
+        <div class="about-container container grid">
+          <img src="assets/img/keyboard.jpg" alt="" class="about-img" />
+          <div>
+            <p class="about-description">
+              I am a first-year computer science student and software engineer
+              based in the UK. I have prior work experience in web and game
+              development, and I'm currently growing a further love for machine
+              learning. <br /><br />
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Welcome to Shadi Abumattar's Portfolio.</h1>
-							<p>Hello there! I'm Shadi, a 19 year-old computer enthusiast with a love for developing ambitious projects and participating in hackathons.</p>
-							<p><code>print("Welcome to my page!");</code></p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">See projects</a></li>
-							</ul>
-						</div>
-					</section>
+              When I'm not thinking about programming, I enjoy cooking (see
+              <a
+                target="_blank"
+                class="clear-link"
+                href="https://w8-recipedia.netlify.app/app/home"
+                >Recipedia</a
+              >), weightlifting and playing games with friends.
+            </p>
+            <div class="about-info">
+              <div>
+                <span class="about-info-title">04+</span>
+                <span class="about-info-name"
+                  >Years of <br />
+                  experience</span
+                >
+              </div>
+              <div>
+                <span class="about-info-title">07+</span>
+                <span class="about-info-name"
+                  >Personal <br />
+                  projects</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<!-- Projects section -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="https://w8-recipedia.netlify.app" class="image"><img src="assets/images/recipedia.png" alt="Website overview" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Recipedia</h2>
-									<p>A revolutionary recipe recommendation site built using React and Express.</p>
-									<ul class="actions">
-										<li><a href="https://w8-recipedia.netlify.app" class="button" target="_blank" rel="noopener noreferrer">Check out Recipedia</a></li>
-										<li><a href="https://github.com/W8-Recipedia/Recipedia" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>Interphase (GreatUniHack 2020)</h2>
-									<p>Developed in under 12 hours during a hackathon, this educational website bridged the gap for bright individuals with no technological experience so that mainstream tutorials are more approachable. </p>
-									<ul class="actions">
-										<li><a href="https://thecodingbridge.github.io/Interphase" class="button" target="_blank" rel="noopener noreferrer">Check out Interphase</a></li>
-										<li><a href="https://github.com/TheCodingBridge/Interphase" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>Rush</h2>
-									<p>A game developed in Python using the Tkinter module and inspired by the gold rush. The aim is to collect as many coins as possible before the time runs out or you get caught by a guard.</p>
-									<ul class="actions">
-										<li><a href="https://github.com/AbumattarSA/Rush" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>DevMatch</h2>
-									<p>A fictional start-up where developers, investors and entrepreneurs can discover each other. A full-stack Ruby on Rails web application that includes e-commerce, contact forms, user accounts and profiles.</p>
-									<ul class="actions">
-										<li><a href="https://dev-matcher.herokuapp.com" class="button" target="_blank" rel="noopener noreferrer">Check out DevMatch</a></li>
-										<li><a href="https://github.com/AbumattarSA/DevMatch" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>Rails Blog</h2>
-									<p>A blogging platform that incorporates search functionality, an admin panel and more. A Ruby on Rails web application developed with the Cloud9 IDE. </p>
-									<ul class="actions">
-										<li><a href="https://railsblogg.herokuapp.com/" class="button" target="_blank" rel="noopener noreferrer">Check out the blog</a></li>
-										<li><a href="https://github.com/AbumattarSA/Rails_Blog/" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>plainTodos</h2>
-									<p>Almost every web application can be analogised as a to-do list. A to-do list can help concretise fundamental concepts seen everyday by popular websites like Google, Twitter, Facebook and Amazon as well as various utilities seen in email programs and even chat applications.</p>
-									<ul class="actions">
-										<li><a href="https://plaintodos.herokuapp.com/" class="button" target="_blank" rel="noopener noreferrer">Check out the todo list</a></li>
-										<li><a href="https://github.com/AbumattarSA/plainTodos/" class="button" target="_blank" rel="noopener noreferrer">view the code</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+      <!-- Skills section -->
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <span class="section-subtitle"
+          >My skills, but categorized for your convenience.</span
+        >
+        <div class="skills-container container grid">
+          <div class="skills-content skills-open">
+            <div class="skills-header">
+              <i class="uil uil-brackets-curly skills-icon"></i>
+              <div>
+                <h1 class="skills-title">Front-end Development</h1>
+                <span class="skills-subtitle">4 years of experience</span>
+              </div>
+              <i class="uil uil-angle-down skills-arrow"></i>
+            </div>
+            <div class="skills-list grid">
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">HTML</h3>
+                  <span class="skills-number">3 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">CSS</h3>
+                  <span class="skills-number">3 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">JavaScript</h3>
+                  <span class="skills-number">2 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">React.js</h3>
+                  <span class="skills-number">2 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-				<!-- Contacts sections -->
-					<section id="two" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contact me</h2>
-							<div class="split style1">
-								<section>
-									<form action="https://formspree.io/f/xyybpqav" method="POST">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="email" name="_replyto" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><button type="submit" class="button submit">Send Message</button></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:AbumattarSA@pm.me" target="_blank" rel="noopener noreferrer">AbumattarSA@pm.me</a>
-										</li>
-										<li>
-											<h3>Socials</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/AbumattarSA/" class="fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/abumattarsa/" class="fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-			</div>
+          <div class="skills-content skills-close">
+            <div class="skills-header">
+              <i class="uil uil-server-network skills-icon"></i>
+              <div>
+                <h1 class="skills-title">Back-end Development</h1>
+                <span class="skills-subtitle">2 years of experience</span>
+              </div>
+              <i class="uil uil-angle-down skills-arrow"></i>
+            </div>
+            <div class="skills-list grid">
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">JavaScript</h3>
+                  <span class="skills-number">2 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Python</h3>
+                  <span class="skills-number">2 years</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Node.js</h3>
+                  <span class="skills-number">1 year</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Express.js</h3>
+                  <span class="skills-number">1 year</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Shadi Abumattar. All rights reserved.</li> 
-						<li>Design courtesy of <a href="http://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a> and favicon created by <a href="http://www.freepik.com/" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a>.</li>
-					</ul>
-				</div>
-			</footer>
+          <div class="skills-content skills-close">
+            <div class="skills-header">
+              <i class="uil uil-robot skills-icon"></i>
+              <div>
+                <h1 class="skills-title">Machine Learning</h1>
+                <span class="skills-subtitle">1 year of experience</span>
+              </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+              <i class="uil uil-angle-down skills-arrow"></i>
+            </div>
+            <div class="skills-list grid">
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Python</h3>
+                  <span class="skills-number">1 year</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Jupyter Notebook</h3>
+                  <span class="skills-number">1 year</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-content skills-close">
+            <div class="skills-header">
+              <i class="uil uil-smile skills-icon"></i>
+
+              <div>
+                <h1 class="skills-title">Soft Skills</h1>
+                <span class="skills-subtitle"
+                  >Notable non-technical skills</span
+                >
+              </div>
+
+              <i class="uil uil-angle-down skills-arrow"></i>
+            </div>
+            <div class="skills-list grid">
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Communication</h3>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Problem Solving</h3>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Time Management</h3>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+              <div class="skills-data">
+                <div class="skills-title">
+                  <h3 class="skills-name">Bilingual</h3>
+                  <span class="skills-number">English & Arabic</span>
+                </div>
+                <div class="skills-bar">
+                  <span class="skills-percentage"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Qualifications section -->
+      <section class="qualification section" id="qualifications">
+        <h2 class="section-title">Qualifications</h2>
+        <span class="section-subtitle"
+          >My path to and through the world of computing.</span
+        >
+
+        <div class="container">
+          <div class="qualification-tabs">
+            <div
+              class="qualification-button flex-button visible-qualification"
+              data-target="#education"
+            >
+              <i
+                class="
+                  uil uil-graduation-cap
+                  qualification-icon
+                  visible-qualification
+                "
+              ></i>
+              Education
+            </div>
+
+            <div
+              class="qualification-button flex-button"
+              data-target="#experience"
+            >
+              <i class="uil uil-briefcase-alt qualification-icon"></i>
+              Experience
+            </div>
+          </div>
+
+          <div class="qualification-section">
+            <div
+              class="qualification-content visible-qualification"
+              data-content
+              id="education"
+            >
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">University of Manchester</h3>
+                  <span class="qualification-subtitle"
+                    >BSc, Computer Science</span
+                  >
+                  <div class="qualification-calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2020 - 2024
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-circle"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+              <div class="qualification-data">
+                <div></div>
+                <div>
+                  <span class="qualification-circle"></span>
+                </div>
+                <div>
+                  <h3 class="qualification-title">Royal Grammar School</h3>
+                  <span class="qualification-subtitle">GCSEs & A-Levels</span>
+                  <div class="qualification-calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2013 - 2020
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="qualification-content" data-content id="experience">
+              <div class="qualification-data">
+                <div>
+                  <h3 class="qualification-title">UniCS</h3>
+                  <span class="qualification-subtitle">Web Developer</span>
+                  <div class="qualification-calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2020 - Present
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification-circle"></span>
+                  <span class="qualification-line"></span>
+                </div>
+              </div>
+              <div class="qualification-data">
+                <div></div>
+                <div>
+                  <span class="qualification-circle"></span>
+                </div>
+                <div>
+                  <h3 class="qualification-title">The GameDev Company</h3>
+                  <span class="qualification-subtitle">Unity Developer</span>
+                  <div class="qualification-calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2020 - Present
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="certifications section" id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <span class="section-subtitle"
+          >Voluntary courses that broadened my perspective.</span
+        >
+        <div class="certifications-container container grid">
+          <div class="certifications-content">
+            <div>
+              <i class="uil uil-award certifications-icon"></i>
+              <h3 class="certifications-title">Software Engineering Program</h3>
+              <h4 class="certifications-subtitle">Goldman Sachs</h4>
+            </div>
+
+            <span
+              class="
+                button
+                flex-button
+                button-small button-link
+                certifications-button
+              "
+            >
+              What I learnt
+              <i class="uil uil-arrow-right icon-button"></i>
+            </span>
+
+            <div class="certifications-info">
+              <div class="certifications-info-content">
+                <h4 class="certifications-info-title">
+                  Software Engineering Program
+                </h4>
+                <i class="uil uil-times certifications-info-close"></i>
+
+                <ul class="certifications-info-certifications grid">
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Experienced what it's like to work in the Engineering
+                      division at Goldman Sachs.
+                    </p>
+                  </li>
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Gained skills in basic cryptography and password cracking.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="certifications-content">
+            <div>
+              <i class="uil uil-award certifications-icon"></i>
+              <h3 class="certifications-title">
+                Software Engineering Experience
+              </h3>
+              <h4 class="certifications-subtitle">
+                J.P Morgan <br />
+                Chase & Co.
+              </h4>
+            </div>
+
+            <span
+              class="
+                button
+                flex-button
+                button-small button-link
+                certifications-button
+              "
+            >
+              What I learnt
+              <i class="uil uil-arrow-right icon-button"></i>
+            </span>
+
+            <div class="certifications-info">
+              <div class="certifications-info-content">
+                <h4 class="certifications-info-title">
+                  Software Engineering Experience
+                </h4>
+                <i class="uil uil-times certifications-info-close"></i>
+
+                <ul class="certifications-info-certifications grid">
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Familiarized with JPMorgan Chase frameworks and tools.
+                    </p>
+                  </li>
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Analyzed and visualized data in a way useful to traders.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="certifications-content">
+            <div>
+              <i class="uil uil-award certifications-icon"></i>
+              <h3 class="certifications-title">
+                Technology Internship Experience
+              </h3>
+              <h4 class="certifications-subtitle">Bright Network</h4>
+            </div>
+
+            <span
+              class="
+                button
+                flex-button
+                button-small button-link
+                certifications-button
+              "
+            >
+              What I learnt
+              <i class="uil uil-arrow-right icon-button"></i>
+            </span>
+
+            <div class="certifications-info">
+              <div class="certifications-info-content">
+                <h4 class="certifications-info-title">
+                  Technology Internship Experience
+                </h4>
+                <i class="uil uil-times certifications-info-close"></i>
+
+                <ul class="certifications-info-certifications grid">
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Made valuable connections with world-leading firms such as
+                      Google and Vodafone.
+                    </p>
+                  </li>
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Learnt how to create practical user stories for agile
+                      development life cycles.
+                    </p>
+                  </li>
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Prototyped a project management and communications plan
+                      for a facial verification app.
+                    </p>
+                  </li>
+                  <li class="certifications-info-service">
+                    <i
+                      class="uil uil-check-circle certifications-info-icon"
+                    ></i>
+                    <p>
+                      Took part in simulations of tasks found in real technology
+                      internships.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio section -->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <span class="section-subtitle"
+          >Flick through my proudest projects.</span
+        >
+
+        <div class="portfolio-container container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio-content grid swiper-slide">
+              <img
+                src="assets/img/recipedia.png"
+                alt=""
+                class="portfolio-img"
+              />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Recipedia</h3>
+                <h3 class="portfolio-subtitle">
+                  Tech used: React, Express, Node, Axios, MySQL, Spoonacular
+                  API, Google sign-in
+                </h3>
+                <p class="portfolio-description">
+                  A revolutionary recipe recommendation website
+                  which tailors to your expectations.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://w8-recipedia.netlify.app/"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right icon-button"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/W8-Recipedia/Recipedia"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Code
+                  <i class="uil uil-code-branch icon-button"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-content grid swiper-slide">
+              <img src="assets/img/devmatch.png" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">DevMatch</h3>
+                <h3 class="portfolio-subtitle">
+                  Tech used: Ruby on Rails, PostgreSQL, Stripe, jQuery, MailGun
+                </h3>
+                <p class="portfolio-description">
+                  A full-stack web application that includes e-commerce, contact
+                  forms, user accounts and profiles.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://dev-matcher.herokuapp.com/"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right icon-button"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/AbumattarSA/DevMatch"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Code
+                  <i class="uil uil-code-branch icon-button"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-content grid swiper-slide">
+              <img src="assets/img/blog.png" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Blog</h3>
+                <h3 class="portfolio-subtitle">Tech used: Ruby on Rails, AWS Cloud9 IDE</h3>
+                <p class="portfolio-description">
+                  A software-as-a-service blogging platform that incorporates
+                  search functionality, an admin panel and more.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://github.com/AbumattarSA/Rails_Blog"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right icon-button"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://railsblogg.herokuapp.com/"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Code
+                  <i class="uil uil-code-branch icon-button"></i>
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-content grid swiper-slide">
+              <img src="assets/img/rush.png" alt="" class="portfolio-img" />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Rush</h3>
+                <h3 class="portfolio-subtitle">
+                  Tech used: Python, Tkinter GUI module
+                </h3>
+                <p class="portfolio-description">
+                  A game where the aim is to collect as many coins as possible
+                  before the time runs out or you get caught by a guard.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://github.com/AbumattarSA/Rush"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Code
+                  <i class="uil uil-code-branch icon-button"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio-content grid swiper-slide">
+              <img
+                src="assets/img/interphase.png"
+                alt=""
+                class="portfolio-img"
+              />
+
+              <div class="portfolio-data">
+                <h3 class="portfolio-title">Interphase (Hackathon project)</h3>
+                <h3 class="portfolio-subtitle">
+                  Tech used: HTML, CSS, JavaScript, Markdown
+                </h3>
+                <p class="portfolio-description">
+                  A project for individuals who aren't tech savvy but are
+                  enthusiastic to get started with programming, so that
+                  mainstream tutorials don't look so intimidating.
+                </p>
+                <a
+                  target="_blank"
+                  href="https://thecodingbridge.github.io/Interphase/"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Demo
+                  <i class="uil uil-arrow-right icon-button"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/TheCodingBridge/Interphase"
+                  class="button flex-button button-small portfolio-button"
+                >
+                  Code
+                  <i class="uil uil-code-branch icon-button"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact me</h2>
+        <span class="section-subtitle">Get in touch.</span>
+
+        <div class="contact-container container grid">
+          <div>
+            <div class="contact-information">
+              <i class="uil uil-envelope contact-icon"></i>
+
+              <div>
+                <h3 class="contact-title">Email me</h3>
+                <span class="contact-subtitle"
+                  ><a class="clear-link" href="mailto:AbumattarSA@pm.me"
+                    >AbumattarSA@pm.me</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="contact-information">
+              <i class="uil uil-map-marker contact-icon"></i>
+
+              <div>
+                <h3 class="contact-title">Location</h3>
+                <span class="contact-subtitle">Manchester, UK (willing to relocate)</span>
+              </div>
+            </div>
+          </div>
+
+          <form
+            action="https://formspree.io/f/xoqylzrq"
+            method="POST"
+            class="contact-form grid"
+          >
+            <div class="contact-inputs grid">
+              <div class="contact-content">
+                <label for="" class="contact-label">Name</label>
+                <input type="text" class="contact-input" />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Email</label>
+                <input type="email" name="_replyto" class="contact-input" />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Message</label>
+                <textarea
+                  name="message"
+                  id=""
+                  cols="0"
+                  rows="7"
+                  class="contact-input"
+                ></textarea>
+              </div>
+              <div>
+                <button type="submit" class="button flex-button">
+                  Send message
+                  <i class="uil uil-message icon-button"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bg">
+        <div class="footer-container container grid">
+          <div>
+            <h1 class="footer-title">Shadi Abumattar</h1>
+            <span class="footer-subtitle">Software Engineer | CS Student</span>
+          </div>
+          <ul class="footer-links">
+            <li>
+              <a href="#qualifications" class="footer-link">Qualifications</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+          <div class="footer-socials">
+            <a
+              href="https://www.linkedin.com/in/abumattarsa"
+              target="_blank"
+              class="footer-social"
+            >
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a
+              href="https://github.com/AbumattarSA"
+              target="_blank"
+              class="footer-social"
+            >
+              <i class="uil uil-github-alt"></i>
+            </a>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          &#169; Shadi Abumattar 2021. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <a href="#" class="scroll-to-top" id="scroll-up">
+      <i class="uil uil-arrow-up scroll-to-top-icon"></i>
+    </a>
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
