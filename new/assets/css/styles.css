@@ -910,3 +910,51 @@ input[type="reset"] {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-color-light);
 }
+
+/* Media queries*/
+
+/* Small devices */
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav-menu {
+    padding: 2rem 0.25rem 4rem;
+  }
+
+  .nav-list {
+    column-gap: 0;
+  }
+
+  .home-content {
+    grid-template-columns: 0.25fr 3fr;
+  }
+
+  .home-blob {
+    width: 180px;
+  }
+
+  .skills-title {
+    font-size: var(--normal-font-size);
+  }
+
+  .qualification-data {
+    gap: 0.5rem;
+  }
+
+  .certifications-container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+
+  .certifications-content {
+    padding-right: 3.5rem;
+  }
+
+  .certifications-modal {
+    padding: 0 0.5rem;
+  }
+}
