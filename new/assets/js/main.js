@@ -45,3 +45,26 @@ function skillsToggle() {
 skillsHeader.forEach((el) => {
   el.addEventListener("click", skillsToggle);
 });
+
+/* Qualifications */
+
+const qualificationTabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
+
+qualificationTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("visible-qualification");
+    });
+
+    target.classList.add("visible-qualification");
+
+    tab.forEach((tab) => {
+      tab.classList.remove("visible-qualification");
+    });
+
+    tab.classList.add("visible-qualification");
+  });
+});
