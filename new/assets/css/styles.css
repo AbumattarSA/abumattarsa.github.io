@@ -752,3 +752,63 @@ input[type="reset"] {
 .swiper-pagination-bullet {
   outline: none;
 }
+
+/* Contact */
+
+.contact-container {
+  row-gap: 3rem;
+}
+
+.contact-information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact-subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact-content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+.contact-label {
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+.contact-input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.clear-link {
+  color: var(--first-color-alt);
+}
+
+.clear-link:link {
+  color: var(--first-color-alt);
+}
+
+.clear-link:hover {
+  color: var(--first-color-lighter);
+}
