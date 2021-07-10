@@ -151,7 +151,7 @@ function scrollToTop() {
 }
 window.addEventListener("scroll", scrollToTop);
 
-/* Theme changes */
+/* Theme switching */
 
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
