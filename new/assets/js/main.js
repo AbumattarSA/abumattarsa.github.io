@@ -68,3 +68,27 @@ qualificationTabs.forEach((tab) => {
     tab.classList.add("visible-qualification");
   });
 });
+
+/* Certifications */
+
+const certificationInfo = document.querySelectorAll(".certifications-info"),
+  certificationOpen = document.querySelectorAll(".certifications-button"),
+  certificationClose = document.querySelectorAll(".certifications-info-close");
+
+let modal = function (certificationClick) {
+  certificationInfo[certificationClick].classList.add("active-certification");
+};
+
+certificationOpen.forEach((certificationButton, i) => {
+  certificationButton.addEventListener("click", () => {
+    modal(i);
+  });
+});
+
+certificationClose.forEach((certification) => {
+  certification.addEventListener("click", () => {
+    certificationInfo.forEach((activeCertification) => {
+      activeCertification.classList.remove("active-certification");
+    });
+  });
+});
