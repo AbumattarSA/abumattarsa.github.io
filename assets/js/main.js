@@ -61,7 +61,7 @@ qualificationTabs.forEach((tab) => {
 
     target.classList.add("visible-qualification");
 
-    tab.forEach((tab) => {
+    qualificationTabs.forEach((tab) => {
       tab.classList.remove("visible-qualification");
     });
 
