@@ -112,18 +112,9 @@ img {
 }
 
 .section-title {
-  font-size: var(--h1-font-size);
-}
-
-.section-subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-
-.section-title,
-.section-subtitle {
   text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-2-5);
 }
 
 .container {
@@ -652,8 +643,8 @@ input[type="reset"] {
   .section {
     padding: 6rem 0 2rem;
   }
-  .section-subtitle {
-    margin-bottom: 4rem;
+  .section-title {
+    margin-bottom: 2.5rem;
   }
 
   .header {
