@@ -114,7 +114,7 @@ img {
 .section-title {
   text-align: center;
   font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: var(--mb-3);
 }
 
 .container {
@@ -644,7 +644,7 @@ input[type="reset"] {
     padding: 6rem 0 2rem;
   }
   .section-title {
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
   }
 
   .header {
